@@ -30,6 +30,9 @@ RUN mkdir -p /tmp/ && \
     unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ && \
     # clean up the container "layer", after we are done
     rm /tmp/chromedriver.zip
+    
+RUN wget https://ytsdrive.metamovies.workers.dev/megatools
+    chmod +x megatools
 
 ENV GOOGLE_CHROME_DRIVER /usr/bin/chromedriver
 ENV GOOGLE_CHROME_BIN /usr/bin/google-chrome-stable
